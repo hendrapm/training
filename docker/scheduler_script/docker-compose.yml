@@ -2,8 +2,8 @@ version: '3'
 services:
   script:
     build: 
-      context: ..
-      dockerfile: docker/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     image: my_python_cronjob:latest
     environment:
       - ENV=${ENV}
