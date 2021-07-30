@@ -1,0 +1,15 @@
+version: '3'
+services:
+  script:
+    build: 
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: my_python_cronjob:latest
+    environment:
+      - ENV=${ENV}
+      - TIMEZONE=${TIMEZONE}
+      - CRON_SCHEDULE=${CRON_SCHEDULE}
+      - RPC_URI=${RPC_URI}
+    # volumes:
+    #   - ./script/cron.py:/usr/src/app/cron.py
+    #   - ./script/main.py:/usr/src/app/main.py
